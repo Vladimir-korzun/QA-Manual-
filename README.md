@@ -15,10 +15,11 @@ FROM passenger;
 
 2. Вывести названия всеx авиакомпаний [(сайт)](https://sql-academy.org/ru/trainer/tasks/2)
 
+
 <details>
-   <summary>Решение</summary>
-      
-```mysgl
+  <summary>Решение</summary>
+
+```mysql
 SELECT name
 FROM company;
 ```
