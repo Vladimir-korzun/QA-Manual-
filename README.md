@@ -152,6 +152,22 @@ WHERE DATE(time_out) = '1900-01-01'
    <summary>Решение</summary>
 
 ```mysql
+SELECT name
+from passenger
+WHERE LENGTH(name) = (
+		SELECT MAX(LENGTH(name))
+		from passenger
+	)
+```
+   
+</details>
+
+12. Выведите идентификаторы всех рейсов и количество пассажиров на них. Обратите внимание, что на каких-то рейсах пассажиров может не быть. В этом случае выведите число "0". [(сайт)](https://sql-academy.org/ru/trainer/tasks/12)
+
+<details>
+   <summary>Решение</summary>
+
+```mysql
 
 ```
    
