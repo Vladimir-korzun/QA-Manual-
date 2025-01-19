@@ -20,7 +20,7 @@ FROM passenger;
       
 ```mysgl
 SELECT name
-from company
+FROM company;
 ```
 
 </details>
