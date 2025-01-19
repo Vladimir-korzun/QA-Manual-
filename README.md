@@ -25,3 +25,16 @@ FROM company;
 ```
 
 </details>
+
+3. Вывести все рейсы, совершенные из Москвы [(сайт)](https://sql-academy.org/ru/trainer/tasks/3)
+
+<details>
+   <summary>Решение</summary>
+
+```mysql
+SELECT *
+from trip
+WHERE town_from = 'moscow'
+```
+   
+</details>
