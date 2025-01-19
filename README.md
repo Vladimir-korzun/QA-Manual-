@@ -123,7 +123,7 @@ WHERE town_from = 'Vladivostok'
 10. Вывести вылеты, совершенные с 10 ч. по 14 ч. 1 января 1900 г. [(сайт)](https://sql-academy.org/ru/trainer/tasks/10)
 
 <details>
-   <summary>Решение</summary>
+   <summary>Решение_1</summary>
 
 ```mysql
 SELECT *
@@ -131,6 +131,19 @@ from trip
 where time_out BETWEEN '1900.01.01 10.00.00' AND '1900.01.01 14.00.00'
 ```
    
+</details>
+
+<details>
+  <summary>Решение_2</summary>
+
+```mysql
+SELECT *
+FROM trip
+WHERE DATE(time_out) = '1900-01-01'
+  AND TIME_FORMAT(time_out, '%H:%i') >= '10:00'
+  AND TIME_FORMAT(time_out, '%H:%i') <= '14:00';
+```
+
 </details>
 
 11. Выведите пассажиров с самым длинным ФИО. Пробелы, дефисы и точки считаются частью имени. [(сайт)](https://sql-academy.org/ru/trainer/tasks/11)
